@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+    timemachine-server:
+        build:
+            context: .
+            args:
+                - DEBUG=1
+        network_mode: "host"
+        ports:
+            - "445:445"
+            - "5353:5353/udp"
+        volumes:
+            - "./docker-mounts/timemachine-data:/timemachine"
+            - "./docker-mounts/security:/etc/samba/security"

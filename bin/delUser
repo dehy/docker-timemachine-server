@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -eux
+
+pdbedit -x $1
+userdel $1
