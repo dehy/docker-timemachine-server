@@ -19,7 +19,7 @@ To delete a user
     $ docker exec -it timemachine-server delUser john
 
 If you want to produce a non-optimized build (ie. for debug purpose),
-you can pass the build arg `DEBUG_BUILD=1`
+you can pass the build arg `DEBUG=1`
 
     $ docker build -t dehy/timemachine-server --build-arg DEBUG=1 .
 
